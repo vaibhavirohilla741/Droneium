@@ -1,0 +1,14 @@
+.FooterContainer{
+   display: flex;
+    background-color: #37373f;
+    padding-bottom: 60px;
+    
+    
+}
+@media only screen and (max-width: 600px) {
+    .FooterContainer {
+      background-color: #37373f;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
