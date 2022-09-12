@@ -1,0 +1,14 @@
+.numberAnimation {
+  margin: 5%;
+
+  height: 10px;
+  font-size: 4rem;
+  padding: 20%;
+margin-bottom: 0%;
+  font-weight: 700;
+  margin-right: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
