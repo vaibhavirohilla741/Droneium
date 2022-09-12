@@ -5,6 +5,7 @@ import React from "react";
 import Home from "./Container/Home/Home";
 import Contact from "./Container/Contact/Contact";
 import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register/>}/>
         </Routes>
        
       </Layout>

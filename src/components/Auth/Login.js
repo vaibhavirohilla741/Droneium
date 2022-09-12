@@ -4,7 +4,6 @@ import firebase from "firebase/compat/app";
 import auth from "firebase/compat/auth";
 import HashLoader from "react-spinners/HashLoader";
 
-
 const LoginContainer = styled.div`
   margin: 3rem auto;
   padding: 4rem;
@@ -54,6 +53,20 @@ const LoginContainer = styled.div`
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
+  .register {
+    color:#5c3d03;
+    display: block;
+    flex-direction: row;
+    font-size:14px;
+  }
+  .register a{
+    cursor:pointer; 
+    
+    text-decoration:none;
+  }
+  .register p{
+    margin-bottom:0;
+  }
 `;
 
 const Login = (props) => {
@@ -68,22 +81,25 @@ const Login = (props) => {
     setLoading(true);
     auth
       .signInWithEmailAndPassword(email, password)
-      .then(r => {
-        localStorage.setItem("isAuth",true);
+      .then((r) => {
+        localStorage.setItem("isAuth", true);
         setMessage("Login Successful!");
-      setLoading(false);
-      window.location.href = '/';
-    })
+        setLoading(false);
+        window.location.href = "/";
+      })
       .catch((err) => {
         setMessage("Invalid Credentials");
-        console.log(err)});
+        console.log(err);
+      });
   };
 
   return (
     <LoginContainer>
-      <div className="container">
+      <div >
         {loading ? (
-          <center><HashLoader  color={"#b49c73"} loading={loading}  size={80} /></center>
+          <center>
+            <HashLoader color={"#b49c73"} loading={loading} size={80} />
+          </center>
         ) : (
           <div>
             <h1>Login</h1>
@@ -117,7 +133,14 @@ const Login = (props) => {
                 Login
               </button>
             </form>
-           
+            <div className="register">
+              <div>
+                <p>Don't have a Account?</p>
+              </div>
+              <div className="register-button">
+                <a href="/register">Register</a>
+              </div>
+            </div>
           </div>
         )}
       </div>

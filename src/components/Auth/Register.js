@@ -1,24 +1,49 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import dev from "../../config";
-import axios from "axios";
+import firebase from "firebase/compat/app";
+import auth from "firebase/compat/auth";
 
 const RegisterContainer = styled.div`
   margin: 3rem auto;
   padding: 4rem;
   width: 50rem;
 
+  .form-group {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
   h1 {
     font-weight: 900;
-    color: #277;
+    color: #b49c73;
     text-align: center;
   }
   .btn-primary {
     margin-top: 2rem;
-    background: #277;
+    color: white;
+    background: #b49c73;
     border: none;
+    padding: 10px;
     &:hover {
-      background: #299;
+      background: #b49c73;
     }
   }
   .message {
@@ -34,33 +59,26 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  const changeOnClick = (e) => {
+  const registerNewUser = (e) => {
     e.preventDefault();
-    const user = {
-      name,
-      email,
-      password,
-    };
-    setName("");
-    setEmail("");
-    setPassword("");
-    console.log("user: ", user);
-    axios
-      .post(`${dev.baseURL}/users/signup`, user)
+    console.log(email, password);
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
       .then((res) => {
-        console.log("success", res.data);
-        localStorage.setItem("token", res.data);
-        setMessage("Registeration Successful!");
+        window.location.href = "/";
+        console.log(res);
       })
-      .catch((err) => setMessage("Email Exist!"));
+      .catch((error) => {
+        setMessage(error);
+      });
   };
-
   return (
     <RegisterContainer>
       <div className="container">
         <h1>Join Us</h1>
         <span className="message">{message}</span>
-        <form onSubmit={changeOnClick} encType="multipart/form-data">
+        <form onSubmit={registerNewUser} encType="multipart/form-data">
           <div className="form-group">
             <label htmlFor="authorname">Name</label>
             <input
