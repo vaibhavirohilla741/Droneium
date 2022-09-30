@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap");
+
+.boxp {
+    font-size: 1.2rem;
+    margin: 30px;
+    
+    color: white;
+  }
+  .iconBox{
+    margin-top: 30px;
+    color: aliceblue;
+  }
