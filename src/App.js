@@ -6,7 +6,7 @@ import Home from "./Container/Home/Home";
 import Contact from "./Container/Contact/Contact";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-
+import Gallary from "./Container/Gallary/Gallary"
 
 function App() {
  
@@ -17,6 +17,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>}/>
+          <Route path="/gallary" element={<Gallary />}/>
         </Routes>
        
       </Layout>
