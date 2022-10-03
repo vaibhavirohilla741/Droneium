@@ -11,7 +11,7 @@ const logo = (props) => {
         })
        
         //Runs on every render
-      });
+      },[]);
     return (
     <div className={classes.Logo} style={{height: props.height}}>
         <img src={logosrc} alt="MyBurger" />
