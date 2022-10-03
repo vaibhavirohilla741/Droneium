@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-material-ui-carousel";
 import classes from "./CarouselContainer.module.css";
-import carousel1 from "../../assets/images/carousel1.jpg";
-import Carousel4 from "../../assets/images/carousel4.png";
-import Carousel3 from "../../assets/images/carousel3.png";
 import axios from "axios";
 
 function CarouselContainer() {
