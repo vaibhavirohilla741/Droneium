@@ -6,9 +6,10 @@ import Home from "./Container/Home/Home";
 import Contact from "./Container/Contact/Contact";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-import Gallary from "./Container/Gallary/Gallary"
+import Gallary from "./Container/GallaryContainer/GallaryContainer"
 
 function App() {
+  
  
   return (
       <Layout>

@@ -30,12 +30,12 @@ function Reach() {
       </div>
       <div className="flexbox">
         <div className="flexbox1">
-        <NumberAnimation value={100} color='#f1c50e' textColor='#111111'/>
-        <NumberAnimation value={200} color='#333333' textColor="#ffffff" />
+        <NumberAnimation value={10} para="Project Finished" color='#f1c50e' textColor='#111111'/>
+        <NumberAnimation value={24} para="Happy Clients" color='#333333' textColor="#ffffff" />
         </div>
         <div className="flexbox1">
-          <NumberAnimation value={300} color='#333333' textColor="#ffffff"/>
-          <NumberAnimation value={400} color='#f1c50e' textColor='#111111'/>
+          <NumberAnimation value={44} para="Followers" color='#333333' textColor="#ffffff"/>
+          <NumberAnimation value={120} para="Working Hours" color='#f1c50e' textColor='#111111'/>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ function NumberAnimation(props) {
   `;
 
   const [value, setValue] = useState(props.value);
-  let formatValue = (value) => value.toFixed(0);
+  let formatValue = (value) => `${value.toFixed(0)}K`;
   return (
     <NumberContainer>
       <center>
@@ -23,7 +23,7 @@ function NumberAnimation(props) {
           duration={3000}
           easing={"linear"}
           className={"numberAnimation"}
-        ></AnimatedNumber><p style={{margin:"none"}}>Iam Genius!</p>
+        ></AnimatedNumber><center><p style={{margin:"none",fontWeight:"500"}}>{props.para}</p></center>
       </center>
     </NumberContainer>
   );
