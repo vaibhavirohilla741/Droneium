@@ -14,7 +14,7 @@ function CarouselContainer() {
         setCarouselsrc([res.data]);
       });
   }, []);
-
+  console.log(carouselsrc);
   return (
     <div>
       {carouselsrc.map((item) => {

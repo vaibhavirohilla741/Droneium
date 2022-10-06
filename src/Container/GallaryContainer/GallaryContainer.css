@@ -1,5 +1,6 @@
 .GallaryContainer{
-    height: 100vh;
+    height: auto;
    margin: 5%;
-    overflow: auto;
+   
 }
+
