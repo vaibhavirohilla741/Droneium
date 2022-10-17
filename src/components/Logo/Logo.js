@@ -12,6 +12,7 @@ const logo = (props) => {
        
         //Runs on every render
       },[]);
+      console.log(logosrc);
     return (
     <div className={classes.Logo} style={{height: props.height}}>
         <img src={logosrc} alt="MyBurger" />

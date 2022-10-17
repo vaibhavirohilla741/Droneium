@@ -3,6 +3,7 @@
   height: 500px;
   display: flex;
   background-color: aliceblue;
+  margin-right: 30px;
 }
 .featureContent {
   font-family: "Roboto Slab", serif;
